@@ -13,16 +13,17 @@ header .top h1 a {width:150px; height:29px;}
 header .top h1 a img {width:100%;}
 header .top form {}
 header .top form fieldset {
-    padding:0 10px;
     border:1px solid #F87D18;
 }
 header .top form fieldset #search_wrap {
+    padding:0 10px;
     width:387px; height:40px;
 }
-header .top form fieldset #search_btn {background:none;}
+header .top form fieldset #search_btn {background:none; position:relative; top:5px; padding-right:10px;}
 header .top form fieldset #search_btn img {}
 header .user_menu {}
-header .user_menu a {}
+header .user_menu a {margin-right:15px;}
+header .user_menu a:last-child {margin:0;}
 header .user_menu a img {}
 header nav {width:calc(100% - 120px); margin:0 auto;}
 header nav a {}
@@ -42,6 +43,7 @@ header nav .gnb > li {position:relative;}
 header nav .gnb > li > a {
     font-size:1.125rem;
 }
+header nav .gnb > li:nth-child(1) > a {color:#F87D18; font-weight:700;}
 header nav .gnb > li > .sub1 {
     position:absolute;
     padding-top:18px;
@@ -66,7 +68,11 @@ main #visual_slide .swiper-wrapper {}
 main #visual_slide .swiper-wrapper .swiper-slide {height:600px;}
 main #visual_slide .swiper-wrapper .swiper-slide .txt {text-align:center;}
 main #visual_slide .swiper-wrapper .swiper-slide .txt p {}
-main #visual_slide .swiper-wrapper .slide1 {background-image:url(../images/visual_riviera.jpg); background-size:cover; background-position:center;} 
+main #visual_slide .swiper-wrapper .slide1 {
+    background-color:rgba(0,0,0,0.3);
+    background-image:url(../images/visual_riviera.jpg);
+    background-size:cover;
+    background-position:center;} 
 main #visual_slide .swiper-wrapper .slide2 {background-image:url(../images/visual_summer.jpg);}
 main #visual_slide .swiper-button-prev,
 main #visual_slide .swiper-button-next {width:40px; height:40px;}
@@ -257,6 +263,7 @@ footer .top .address_wrap p {
 }
 footer .top .address_wrap p img {width:100%;}
 footer .top .address_wrap address {font-size:0.75rem; background-color:coral; line-height:17px;}
+footer .top .address_wrap address a {font-size:0.75rem;}
 footer .btm {padding:20px 0;}
 footer .btm .fnb {
     margin-bottom:20px;
