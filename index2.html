@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>GENTLE MONSTER</title>
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+</head>
+<body>
+    <!-- 모든 웹페이지에서 반복되는 header,footer등과 같은
+        레이아웃은 html내에 작성해두면 수정할때 페이지 개수별로
+        수정해야해서 영역 1개 수정할때 파일이 30개 있다면 30번 수정하는 방식으로 효율성이 떨어지므로
+        반복 되는 영역을 잘라서(ctrl+X) php파일로 분리후 링크로 연결해서 작성한다. -->
+    <!-- php 주의사항 -->
+    <!-- php는 백앤드언어(서버)로 동적기능을 제공하는 웹 호스팅에 올렸을때만 결과를 확인 할 수 있다.
+        로컬(내 컴퓨터) 환경에서는 볼 수 없다. 로컬 환경에서 볼 수 없어 실시간 편집이 불가능하기 때문에
+        php제작은 header, footer html,css,js 구성을 모두 완료한 후 마지막에 php로 제작한다.-->
+        <!-- php연결문법 -->
+        <!-- <?php include ("php경로") ?> -->
+        <?php include ('./header.php') ?>
+    <main>
+        <div class="visual">
+            <div class="txt">
+                <p>데이제르와 함께한 협업 컬렉션을 만나보세요</p>
+                <h1>GENTLE MONSTER D`HEYGERE</h1>
+                <div class="link">
+                    <a href="#">컬렉션 보러가기</a>
+                    <a href="#">자세히 보기</a>
+                </div>
+            </div>
+            <video src="./video/visual.mp4" autoplay loop muted></video>
+        </div>
+        <div class="adver_bnr">
+            <div class="txt">
+                <p>볼드 컬렉션 2차 드롭을 만나보세요</p>
+                <h1>BOLD COLLECTION</h1>
+                <div class="link">
+                    <a href="#">구매하기</a>
+                    <a href="#">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+        <!-- main 3. service -->
+        <div id="online_service"><!--bg-->
+            <div class="txt">
+                <h1>온라인 프로덕트 서비스</h1>
+                <p>
+                    오프라인 매장 방문이 어려우신가요?<br>
+                    전 세계 어디에서든 온라인으로 서비스를 신청해 보세요.<br>
+                    수리를 마친 제품은 고객님이 계신 곳으로 안전하게 보내드립니다.<br>
+                    구매 당시의 설렘을 느낄 수 있도록, 제품의 전반적인 컨디션도 함께
+                    점검해드립니다.
+                </p>
+                <a href="#" class="service_link">접수하기</a>
+            </div>
+        </div>
+        <div id="shop_service"><!--bg-->
+            <div class="txt">
+                <h1>매장 내 서비스</h1>
+                <p>
+                    고객님의 편안한 제품 사용을 위하여<br>
+                    전세계 오프라인 매장에서 맞춤 피팅 서비스를  무상으로 지원합니다.<br>
+                    코패드와 나사, 로고와 같은 소모부품도 현장에서 교체 가능합니다.<br>
+                    매장 내에서 진행이 어려운 서비스의 경우, 프로덕트 서비스팀으로<br>
+                    이관될 수 있도록 수리 접수를 도와드립니다.
+                </p>
+                <a href="#" class="shop_link">가까운 매장 찾기</a>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <?php include ('./footer.php') ?>
+    <!-- header, footer 웹페이지 공통영역 적용JS -->
+    <script src="./script/common.js"></script>
+</body>
+</html>
