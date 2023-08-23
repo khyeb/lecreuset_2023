@@ -271,16 +271,13 @@ main .collection .tab_contents  .product_wrap .product p {
 footer .notice_slide_bg {
     padding:30px 0;
     background:#F87D18;
-}
-footer .notice_slide_bg .notice_slide {
-    margin:0 auto;
-    max-width:1320px;
     display:flex;
     justify-content:center;
 }
-footer .notice_slide_bg .notice_slide h2 {color: #fff; font-weight:700;}
-footer .notice_slide_bg .notice_slide .notice_slide_wrap {
-    text-align:center;
+footer .notice_slide_bg {
+}
+footer .notice_slide_bg h2 {color: #fff; font-weight:700;}
+footer .notice_slide_bg .notice_slide_wrap {
     background-color: tomato;
 }
 footer > * {letter-spacing:-0.02em;}
