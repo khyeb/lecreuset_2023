@@ -1,3 +1,4 @@
+/* header */
 header {border-bottom:2px solid #000;}
 header .top {
     width:calc(100% - 120px);
@@ -67,7 +68,7 @@ header nav .gnb > li .sub1 > li .sub2 li {
     padding:20px 0 0 10px;
 }
 header nav .gnb > li .sub1 > li .sub2 li a {}
-header nav .gnb > li .sub1 a:hover {color:#F87D18 !important; }
+header nav .gnb > li .sub1 a:hover {color:#F87D18 !important;}
 /* 슬라이드 */
 main #visual_slide {position: relative; z-index:700;}
 main #visual_slide::after {
@@ -160,8 +161,8 @@ main .new_product #new_slide .swiper-wrapper .swiper-slide .info .price em {font
 main .new_product #new_slide .swiper-wrapper .swiper-slide .info .price del {font-size:0.75rem; color:#aaa; text-decoration:line-through}
 main .new_product #slide_bg .swiper-button-prev,
 main .new_product #slide_bg .swiper-button-next {width:35px; height:35px;}
-main .new_product #slide_bg .swiper-button-next {background: url(../images/arrow_next_color.png) no-repeat; right:200px;}
-main .new_product #slide_bg .swiper-button-prev {background: url(../images/arrow_back_color.png) no-repeat; left:200px;}
+main .new_product #slide_bg .swiper-button-next {background: url(../images/arrow_next_color.png) no-repeat; margin-right:200px;}
+main .new_product #slide_bg .swiper-button-prev {background: url(../images/arrow_back_color.png) no-repeat; margin-left:200px;}
 main .new_product #slide_bg .swiper-button-next::after,
 main .new_product #slide_bg .swiper-button-prev::after {display:none;}
 /* 중간배너 */
@@ -181,6 +182,11 @@ main .new_product #slide_bg .swiper-button-prev::after {display:none;}
     padding:10px 0;
     width:93px;
     border:1px solid #000;
+    transition:all 0.5s linear;
+}
+.banner_1 a:hover {
+    background: #000;
+    color:#fff;
 }
 /* 베스트 상품 */
 .best_product > * {letter-spacing:-0.02em;}
@@ -193,12 +199,13 @@ main .new_product #slide_bg .swiper-button-prev::after {display:none;}
 }
 .best_product .title p {margin-bottom:50px;}
 .best_product #best_slide {
+    width:calc(100% - 120px);
     max-width:1320px; margin:0 auto;
 }
 main .best_product #best_slide .swiper-wrapper {}
 main .best_product #best_slide .swiper-wrapper .swiper-slide {background-color: aqua;}
 main .best_product #best_slide .swiper-wrapper .swiper-slide .product_img {}
-main .best_product #best_slide .swiper-wrapper .swiper-slide .product_img a {display:block; width:203px;}
+main .best_product #best_slide .swiper-wrapper .swiper-slide .product_img a {display:block;}
 main .best_product #best_slide .swiper-wrapper .swiper-slide .product_img a img{width:100%;}
 main .best_product #best_slide .swiper-wrapper .swiper-slide .info {}
 main .best_product #best_slide .swiper-wrapper .swiper-slide .info .product_title {margin:12px 0;}
@@ -243,11 +250,14 @@ main .collection .tab_title a {
     border:1px solid #F87D18;
 }
 main .collection .tab_title a:last-child {margin:0;}
+main .collection .tab_title a:hover {color:#fff; background-color: #F87D18;}
 main .collection .tab_title .active {
     color: #fff;
     background-color:#F87D18;
 }
-main .collection .tab_contents {background-color: cornflowerblue;}
+main .collection .tab_contents {
+    background-color: cornflowerblue;
+}
 main .collection .tab_contents {
     display:flex; justify-content:space-between;
 }
@@ -269,23 +279,25 @@ main .collection .tab_contents  .product_wrap .product p {
 }
 /* footer */
 footer .notice_slide_bg {
-    padding:30px 0;
     background:#F87D18;
-    display:flex;
-    justify-content:center;
+    height:73px;
 }
-footer .notice_slide_bg {
-}
-footer .notice_slide_bg h2 {color: #fff; font-weight:700;}
+footer .swiper {margin:0; width:300px;}
 footer .notice_slide_bg .notice_slide_wrap {
+    margin:30px auto;
+    background:yellow;
+    width:calc(100% - 120px); height:20px; display:flex; justify-content:center;
+}
+footer .notice_slide_bg .notice_slide_wrap h2 {color: #fff; font-weight:700; margin-right:20px;}
+footer .notice_slide_bg .notice_slide_wrap a{color: #fff;
     background-color: tomato;
 }
 footer > * {letter-spacing:-0.02em;}
 footer {
-    text-align:center;
     display: flex; flex-flow:column nowrap;
 }
 footer .top {
+    text-align:center;
     padding:50px;
 }
 footer .top .support {
@@ -321,7 +333,7 @@ footer .top .address_wrap p {
 footer .top .address_wrap p img {width:100%;}
 footer .top .address_wrap address {font-size:0.75rem; background-color:coral; line-height:17px;}
 footer .top .address_wrap address a {font-size:0.75rem;}
-footer .btm {padding:20px 0;}
+footer .btm {padding:20px 0;text-align:center;}
 footer .btm .fnb {
     margin-bottom:20px;
 }

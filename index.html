@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- style -->
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/responsive.css">
 </head>
@@ -367,15 +368,17 @@
                 </div>
             </div>
         </section>
-        <!-- 공지사항 슬라이드 -->
     </main>
+    <!-- 공지사항 슬라이드 -->
     <footer>
         <div class="notice_slide_bg">
-            <h2>공지사항</h2>
-            <div class="swiper" id="notice_slide">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slide1"><a href="#">북유럽 컬렉션 포토후기 이벤트 당첨자 발표</a></div>
-                    <div class="swiper-slide slide2"><a href="#">르크루제 정품 관련 안내문</a></div>
+            <div class="notice_slide_wrap">
+                <h2>공지사항</h2>
+                <div class="swiper" id="notice_slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1"><a href="#">북유럽 컬렉션 포토후기 이벤트 당첨자 발표</a></div>
+                        <div class="swiper-slide slide2"><a href="#">르크루제 정품 관련 안내문</a></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -421,7 +424,7 @@
     <script src="./script/common.js"></script>
     <script>
         const visual_slide = new Swiper ('#visual_slide', {
-            sildesPerView:1,
+            sildesPerView:'auto',
             loop:true,
             disableOnInteraction:false,
             effect:'fade',
@@ -433,44 +436,49 @@
             speed:800,
         })
         const new_slide = new Swiper ('.new_product #new_slide',{
-            slidesPerView:5,
+            slidesPerView:'auto',
             loop:true,
-            spaceBetWeen:39,
             disableOnInteraction:false,
             autoplay:{delay:1000},
             navigation:{
                 nextEl:'#slide_bg .swiper-button-next',
                 prevEl:'#slide_bg .swiper-button-next',
-            }
+            },
+            breakpoints: {
+            400:{slidesPerView:1},
+            900:{slidesPerView:3},
+            1160:{slidesPerView:5},
+    },
         })
         const best_slide = new Swiper ('.best_product #best_slide',{
-            slidesPerView:5,
+            slidesPerView:'auto',
             loop:true,
             spaceBetWeen:39.17,
             autoplay:{delay:4000},
             navigation:{
                 nextEl:'#best_slide_bg .swiper-button-next',
                 prevEl:'#best_slide_bg .swiper-button-next',
-            }
+            },
+            breakpoints: {
+            400:{slidesPerView:1},
+            900:{slidesPerView:3},
+            1160:{slidesPerView:5},
+    },
         })
-        const notice_slide = new Swiper ('.notice_slide_bg #notice_slide',{
-                autoplay:{delay:4000},
-                direction:'vertical'
-                
+        const collectionTabTitle = document.querySelectorAll ('.collection .tab_title a')
+        const collectionTabContents = document.querySelectorAll('.collection .tab_contents')
+        console.log(collectionTabTitle,collectionTabContents)
+        for(let i of collectionTabContents){i.style.display='none'}
+        collectionTabContents[0].style.display='flex'
+        collectionTabTitle.forEach(function(t,i){
+                t.addEventListener('click',function(e){
+                e.preventDefault()
+                for(let i of collectionTabTitle){i.classList.remove('active')}
+                t.classList.add('active')
+                for(let i of collectionTabContents){i.style.display='none'}
+                collectionTabContents[i].style.display = 'flex'
+            })
         })
-        // const collectionTabTitle = document.querySelectorAll ('.collection .tab_title a')
-        // const collectionTabContents = document.querySelectorAll('.collection .tab_contents')
-        // console.log(collectionTabTitle,collectionTabContents)
-        // for(let i of collectionTabContents){i.style.display='none'}
-        // collectionTabContents[0].style.display='flex'
-        // collectionTabTitle.forEach(function(t,i){
-        //     t.addEventListener('click',function(){
-        //         for(let i of collectionTabTitle){i.classList.remove('active')}
-        //         t.classList.add('active')
-        //         for(let i of collectionTabContents){i.style.display='none'}
-        //         collectionTabContents[i].style.display = 'flex'
-        //     })
-        // })
     </script>
 </body>
 </html>

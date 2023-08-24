@@ -18,3 +18,8 @@ for(let i of gnb){
         i.firstElementChild.style.color='#000'
     })
 }
+const notice_slide = new Swiper ('.notice_slide_wrap #notice_slide',{
+    autoplay:{delay:4000},
+    loop:true,
+    direction:'vertical'
+})

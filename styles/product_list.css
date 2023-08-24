@@ -1,0 +1,48 @@
+main > * {letter-spacing:-0.02em}
+main {
+    background-color: aqua;
+    width:calc(100% - 120px); margin:0 auto;
+}
+main .title {
+    margin:100px 0 50px;
+}
+main .title > h2 {
+    font-size:2.313em;
+    background-color: blueviolet;
+    text-align:center;
+    margin-bottom:40px;
+}
+main .title .category {
+    display:flex;
+    justify-content:center;
+    background-color: coral;
+}
+main .title .category a {
+    text-align: center;
+    display:inline-block;
+    font-size:1.250rem;
+}
+main .title .category a::after {
+    display:inline-block;
+    content:'';
+    width:1px;
+    height:18px;
+    margin:0 20px;
+    background:#aaa;
+}
+main .title .category a:last-child::after {display:none;}
+main .product_list {}
+main .product_list .top {
+    display:flex;
+    justify-content:space-between;
+}
+main .product_list .top p {}
+main .product_list .top .product_align {}
+main .product_list .top .product_align a {
+    text-align:center;
+    display:inline-block;
+    padding:10px 0;
+    width:78px;
+    border:1px solid #F87D18;
+    border-radius:15px;
+}
